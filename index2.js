@@ -17,35 +17,59 @@ global.comentarios = [];
 
 function getBody(cursor){
   let vari = JSON.stringify({
-    "shortcode":"CUqe40fLha-",
-    "first":100,
-    "after": cursor
+    "after": cursor,
+    "before": null,
+    "commentProfilePictureSizeDepth0": 32,
+    "commentProfilePictureSizeDepth1": 20,
+    "containerIsFeedStory": true,
+    "containerIsLiveStory": false,
+    "containerIsTahoe": false,
+    "containerIsWorkplace": false,
+    "displayCommentsContextEnableComment": null,
+    "displayCommentsContextIsAdPreview": null,
+    "displayCommentsContextIsAggregatedShare": null,
+    "displayCommentsContextIsStorySet": null,
+    "displayCommentsFeedbackContext": null,
+    "feedbackID": "ZmVlZGJhY2s6MTI5MTQ0NzIxNzkyNTA3Ng==",
+    "feedbackSource": 17,
+    "feedLocation": null,
+    "first": 50,
+    "focusCommentID": null,
+    "includeNestedComments": true,
+    "isComet": false,
+    "isInitialFetch": false,
+    "last": null,
+    "scale": 1,
+    "useDefaultActor": true,
+    "viewOption": null
   })
   let body = querystring.stringify({
-    query_hash: "bc3296d1ce80a24b1b6e40b1e72903f5",
+    doc_id: "4425870374196953",
+    fb_dtsg: "AQFzSbFOASWI7pk:9:1638387858",
     variables: vari
   });
   return body;
 }
-let fBody = getBody("{\"cached_comments_cursor\": \"17917812266070674\", \"bifilter_token\": \"KFoBEADQACAAGAAQAAgACAAIAAgAP_-__-__7f6_2_W____-r__3__9_7_____t1gI_vrZ1PPn7J-t3_b_____f__n3_____3_b_6_z_3__f_7_5T1yh8jV5gCEA\"}");
-let coockie = 'ig_did=6D9087D9-F8A7-4824-A88E-EFBDA4D7C414; ig_nrcb=1; mid=YXnJHAALAAFfG7yIm9iisQO5bLvd; fbm_124024574287414=base_domain=.instagram.com; csrftoken=dmSiDyr9EHpa81dMv8eWU0nXVsHZgqKh; ds_user_id=39360760; sessionid=39360760%3AGX5gOHQXwnOmgi%3A21; shbid="17121\05439360760\0541669925063:01f782b8509434186adde88a825fb06f6cfd36a07e7894c2877939a7c5318783e75b9862"; shbts="1638389063\05439360760\0541669925063:01f70b9fd18c28412eaa9b1e91baa1400dc233e997683337935d577f803d7bd640156791"; fbsr_124024574287414=daUeDsTyUKzdVE_FfItHabnlKJIZVM6LOrwtx9wKkFE.eyJ1c2VyX2lkIjoiMTAwMDAyOTUzMDMyMDE5IiwiY29kZSI6IkFRQWZUYnZ3S1FNWkhQc2pNRklHbDlqQ1FGTzRVOElGdEFFbWhDNjNXZURQZEZLN0lqNzFEU2FuMUNiM25qc00tdDY5eWhLUnk5aDVFLWVobWM5QnJPQ2hKNzkxUGVfNkpJR2FiQ0JDa2xUa2ZHMUsta19fUTh3X0ZjSDJHTFZuNTAzNzA1ZWl3NnJrMS1NeFhITmZqallXSFluZkdHMUZhNlZlQ2phR05SRlNzSEJSTGxkR1prX0VZcmd0cUJkcVNjSlEyRV9RaEtSdGxZdnpGeXp2OHBKMWI2bWJpSHJXdVZyODZ5dzZ1QWFjOFBzRTI4dkF1T05GM3phczlSRzVVWG9PSDlpdjV1M0pGVFJrbG9CM3JkU3ZvRDBkTTIxMm9MdlVtSzQ3U3FTdEZfR0h6bGpreHgtUTRtQkVQWE1DNGlNeDJhN3RLWGlWLW43R1FJbk1ZaS1ZIiwib2F1dGhfdG9rZW4iOiJFQUFCd3pMaXhuallCQUxIVGJmb3NIcTR0ZTdicVdJTDFoSzd2cXIxZXBGU1pBSFpDeEtCbm1lUjU0VzJHRGROTGdUTm5yMlBaQTgzN2xlcXA4emtiVE40RUZsMTdzOFV6cWZJWkMycGk0Y1R6dzFsUlBOZmxWaDdaQzFhd29jb0xNZHFCVHpORTB1SFNuTVdXWkJ2QXRaQ1R5NjlqZDMzc0xyS3hSQVBqU2F5RExIRG9ETkpZT1NKdmlKOHZMeVVrYzRWUFB5YWF2eEwzUVpEWkQiLCJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImlzc3VlZF9hdCI6MTYzODM5MjY5NH0; fbsr_124024574287414=daUeDsTyUKzdVE_FfItHabnlKJIZVM6LOrwtx9wKkFE.eyJ1c2VyX2lkIjoiMTAwMDAyOTUzMDMyMDE5IiwiY29kZSI6IkFRQWZUYnZ3S1FNWkhQc2pNRklHbDlqQ1FGTzRVOElGdEFFbWhDNjNXZURQZEZLN0lqNzFEU2FuMUNiM25qc00tdDY5eWhLUnk5aDVFLWVobWM5QnJPQ2hKNzkxUGVfNkpJR2FiQ0JDa2xUa2ZHMUsta19fUTh3X0ZjSDJHTFZuNTAzNzA1ZWl3NnJrMS1NeFhITmZqallXSFluZkdHMUZhNlZlQ2phR05SRlNzSEJSTGxkR1prX0VZcmd0cUJkcVNjSlEyRV9RaEtSdGxZdnpGeXp2OHBKMWI2bWJpSHJXdVZyODZ5dzZ1QWFjOFBzRTI4dkF1T05GM3phczlSRzVVWG9PSDlpdjV1M0pGVFJrbG9CM3JkU3ZvRDBkTTIxMm9MdlVtSzQ3U3FTdEZfR0h6bGpreHgtUTRtQkVQWE1DNGlNeDJhN3RLWGlWLW43R1FJbk1ZaS1ZIiwib2F1dGhfdG9rZW4iOiJFQUFCd3pMaXhuallCQUxIVGJmb3NIcTR0ZTdicVdJTDFoSzd2cXIxZXBGU1pBSFpDeEtCbm1lUjU0VzJHRGROTGdUTm5yMlBaQTgzN2xlcXA4emtiVE40RUZsMTdzOFV6cWZJWkMycGk0Y1R6dzFsUlBOZmxWaDdaQzFhd29jb0xNZHFCVHpORTB1SFNuTVdXWkJ2QXRaQ1R5NjlqZDMzc0xyS3hSQVBqU2F5RExIRG9ETkpZT1NKdmlKOHZMeVVrYzRWUFB5YWF2eEwzUVpEWkQiLCJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImlzc3VlZF9hdCI6MTYzODM5MjY5NH0; rur="EAG\05439360760\0541669929154:01f7f8607b4723d3fbba94e8fb3f85af430697302ae00553927d5fb145b09745adcce685';
+let fBody = getBody("AQHRQ3LQpTYsRj8u64CdpUoQQ6d4VFZNny27h5p4JBdmGoZa9MOkZxKkI6biYIchw4O2luQpkB5mCMXsGWokxCw9Lw");
 global.options = {
-    url:'https://www.instagram.com/graphql/query/?'+fBody,
-    method: "GET",
-    encoding:null,    
-    headers:{        
+    url:'https://www.facebook.com/api/graphql/',
+    method: "POST",
+    encoding:null,
+    body:fBody,
+    headers:{
+        "Origin":"https://www.facebook.com",
         "Content-Type":"application/x-www-form-urlencoded",
-        "Referer":"https://www.instagram.com/p/CUqe40fLha-/",
+        "Referer":"https://www.facebook.com/caeemmaua/photos/gm.1291447217925076/2926669690981538",
         "Accept-Encoding":"gzip, deflate",     
         "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36",           
-        "Accept":"*/*",
-        "Cookie": coockie,
+        "Accept":"*/*",      
+        "Cookie":"sb=vMZ5YW0GYWA7mGzZPYApwD2H; datr=Q8d5YWb368Qm-jj19duirquL; locale=en_US; wd=1365x969; c_user=100002953032019; xs=9%3AvnGlS1yQRfwaxQ%3A2%3A1638387858%3A-1%3A4924; fr=0ux7bfGTo7dns5bCy.AWUK9AihNERlylD46q4ktgbPt-M.BhXuzR.Y7.AAA.0.0.Bhp9CS.AWWSCJne50M; spin=r.1004788815_b.trunk_t.1638387860_s.1_v.2_",
     }
 }
 
 
 var requestWithEncoding = function(options, callback) {
-    var req = request.get(options);
+    var req = request.post(options);
 
     req.on('response', function(res) {
         var chunks = [];
@@ -81,7 +105,7 @@ var requestWithEncoding = function(options, callback) {
       ws.cell(index+2, 1).string(el.nomeAutor).style(style);
       ws.cell(index+2, 2).string(el.comentario).style(style);
     })
-    wb.write('Excel2.xlsx');
+    wb.write('Excel.xlsx');
   }
   global.count = 0;
   function main(){
@@ -91,31 +115,25 @@ var requestWithEncoding = function(options, callback) {
       //else console.log(JSON.parse(data.replace('for (;;);','')));
       else {
         let json = JSON.parse(data)
-        let arr = [];        
-        if (json.data){
-          arr = json.data.shortcode_media.edge_media_to_parent_comment.edges;
-          arr.forEach(element => {
-            if(!element.node){
-              console.log(arr)                      
-            } else {
-              global.comentarios.push({
-                nomeAutor: "@"+element.node.owner.username,
-                comentario: element.node.text ? element.node.text : ''
-              })                        
-            }                 
-          });
-          let cBody = getBody(json.data.shortcode_media.edge_media_to_parent_comment.page_info.end_cursor);
-          global.options.url = 'https://www.instagram.com/graphql/query/?'+cBody;
-          console.log(global.comentarios.length);
-          if(json.data.shortcode_media.edge_media_to_parent_comment.page_info.has_next_page){
-            main()
+        let arr = [];
+        arr = json.data.feedback.display_comments.edges;
+        arr.forEach(element => {
+          if(!element.node.body){
+            console.log(arr)                      
           } else {
-            geraExcel()
-          }
-        }else {
+            global.comentarios.push({
+              nomeAutor: element.node.author.name,
+              comentario: element.node.body.text ? element.node.body.text : ''
+            })                        
+          }                 
+        });
+        let cBody = getBody(json.data.feedback.display_comments.page_info.end_cursor);
+        global.options.body = cBody;
+        if(json.data.feedback.display_comments.page_info.has_next_page){
           main()
+        } else {
+          geraExcel()
         }
-        
       };
     })
   }
